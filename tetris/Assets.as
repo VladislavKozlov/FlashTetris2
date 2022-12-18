@@ -158,31 +158,38 @@ package tetris
 			return new Shape1() as Bitmap;
 		}
 		
-		public static function get shape2():Bitmap {
+		public static function get shape2():Bitmap 
+		{
 			return new Shape2() as Bitmap;
 		}
 		
-		public static function get shape3():Bitmap {
+		public static function get shape3():Bitmap 
+		{
 			return new Shape3() as Bitmap;
 		}
 		
-		public static function get shape4():Bitmap {
+		public static function get shape4():Bitmap 
+		{
 			return new Shape4() as Bitmap;
 		}
 		
-		public static function get shape5():Bitmap {
+		public static function get shape5():Bitmap 
+		{
 			return new Shape5() as Bitmap;
 		}
 		
-		public static function get shape6():Bitmap {
+		public static function get shape6():Bitmap 
+		{
 			return new Shape6() as Bitmap;
 		}
 		
-		public static function get shape7():Bitmap {
+		public static function get shape7():Bitmap 
+		{
 			return new Shape7() as Bitmap;
 		}
 		
-		public static function get shape8():Bitmap {
+		public static function get shape8():Bitmap 
+		{
 			return new Shape8() as Bitmap;
 		}
 		
@@ -190,7 +197,8 @@ package tetris
 			return new Shape9() as Bitmap;
 		}
 		
-		public static function get shape10():Bitmap {
+		public static function get shape10():Bitmap 
+		{
 			return new Shape10() as Bitmap;
 		}
 		
@@ -198,35 +206,43 @@ package tetris
 			return new Shape11() as Bitmap;
 		}
 		
-		public static function get shape12():Bitmap {
+		public static function get shape12():Bitmap 
+		{
 			return new Shape12() as Bitmap;
 		}
 		
-		public static function get shape13():Bitmap {
+		public static function get shape13():Bitmap 
+		{
 			return new Shape13() as Bitmap;
 		}
 		
-		public static function get shape14():Bitmap {
+		public static function get shape14():Bitmap 
+		{
 			return new Shape14() as Bitmap;
 		}
 		
-		public static function get backgroundTetris():Bitmap {
+		public static function get backgroundTetris():Bitmap 
+		{
 			return new BackgroundTetris() as Bitmap;
 		}
 		
-		public static function get backgroundGeneral():Bitmap {
+		public static function get backgroundGeneral():Bitmap 
+		{
 			return new BackgroundGeneral() as Bitmap;
 		}
 		
-		public static function get backgroundPause():Bitmap {
+		public static function get backgroundPause():Bitmap 
+		{
 			return new BackgroundPause() as Bitmap;
 		}
 		
-		public static function get backgroundGameOver():Bitmap {
+		public static function get backgroundGameOver():Bitmap 
+		{
 			return new BackgroundGameOver() as Bitmap;
 		}
 		
-		public static function get backgroundButton():Bitmap {
+		public static function get backgroundButton():Bitmap 
+		{
 			return new BackgroundButton() as Bitmap;
 		}
 	}

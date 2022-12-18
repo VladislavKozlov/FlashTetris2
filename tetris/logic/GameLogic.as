@@ -14,29 +14,23 @@ package  tetris.logic
 	 */
 	public class GameLogic 
 	{
-		//field
 		private var _width:int; 
 		private var _height:int; 
-		private var _field:Vector.<Vector.<int>>;
-		
-		//current figure
+		private var _field:Vector.<Vector.<int>>;		
 		private var _type:int;
 		private var _angle:int;
 		private var _x:int;
 		private var _y:int;
 		private var _size:int;
 		private var _startX:int;
-		private var _startY:int;
-		
-		//next figure
+		private var _startY:int;		
 		private var _typeNext:int;
 		private var _angleNext:int;
 		private var _blocksLength:int;
 		private var _tetrisCont:DisplayObjectContainer;
 		private var _figureGraphic:Figure;
 		private var _figureGraphicNew:Figure;
-		private var _fieldGraphic:Field;
-		
+		private var _fieldGraphic:Field;		
 		private static var _arrayVectorFigures:Array = [];
 		private static const FIGURES:Array = createFigures();
 		
@@ -60,7 +54,7 @@ package  tetris.logic
 			{
 				_field[y] = new Vector.<int>(_width, true);
 			}
-			//...................................................
+			
 			_figureGraphic = new Figure(_tetrisCont, _size, _width);
 			_figureGraphicNew = new Figure(_tetrisCont, _size, _width);
 			_fieldGraphic = new Field(_tetrisCont, _height, _width, _size);
@@ -77,8 +71,12 @@ package  tetris.logic
 		private function clearField():void
 		{
 			for (var y:int = 0; y < _height; y++ )
+			{
 				for (var x:int = 0; x < _width; x++ )
+				{
 					_field[y][x] = 0;
+				}
+			}
 		}
 		
 		private function reinitNext():void
@@ -244,15 +242,11 @@ package  tetris.logic
 		{
 			_fieldGraphic.removeField();
 			_figureGraphic.removeFigure();
-			_figureGraphicNew.removeFigure();
-			
-			//...................................................
-			
+			_figureGraphicNew.removeFigure();			
 			_fieldGraphic.createField(_field);
 			
 			var figure:Vector.<int> = FIGURES[_type][_angle];
-			_figureGraphic.createFigure(figure, _type, _x, _y);
-			
+			_figureGraphic.createFigure(figure, _type, _x, _y);		
 			figure = FIGURES[_typeNext][_angleNext];
 			_figureGraphicNew.createFigure(figure, _typeNext);
 		}

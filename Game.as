@@ -58,14 +58,11 @@ package
 			
 			TetrisEvent.dispatcher.addEventListener( TetrisEvent.APPLICATION_ENTRY_MAINMENU, onShowGameScreen );
 			TetrisEvent.dispatcher.addEventListener( TetrisEvent.GAME_PLAY_GAMESCREENSTATIC, onGameStart);
-			TetrisEvent.dispatcher.addEventListener( TetrisEvent.APPLICATION_EXIT_GAMESCREENSTATIC, onQuitGameScreenStatic );
-			
+			TetrisEvent.dispatcher.addEventListener( TetrisEvent.APPLICATION_EXIT_GAMESCREENSTATIC, onQuitGameScreenStatic );			
 			TetrisEvent.dispatcher.addEventListener( TetrisEvent.TETRIS_CONTAINER_CREATED_GAMESCREEN, onTetrisContainerCreated );
 			TetrisEvent.dispatcher.addEventListener( TetrisEvent.GAME_PAUSE_GAMESCREEN, onGotoPause );
-			TetrisEvent.dispatcher.addEventListener( TetrisEvent.GAME_EXIT_GAMESCREEN, onQuitGameScreen );
-			
-			TetrisEvent.dispatcher.addEventListener( TetrisEvent.GAME_UN_PAUSE_PAUSESCREEN, onGotoUnPause);
-			
+			TetrisEvent.dispatcher.addEventListener( TetrisEvent.GAME_EXIT_GAMESCREEN, onQuitGameScreen );			
+			TetrisEvent.dispatcher.addEventListener( TetrisEvent.GAME_UN_PAUSE_PAUSESCREEN, onGotoUnPause);			
 			TetrisEvent.dispatcher.addEventListener( TetrisEvent.APPLICATION_EXIT_GAMEOVERSCREEN, onQuitGameOverScreen);
 			TetrisEvent.dispatcher.addEventListener( TetrisEvent.GAME_PLAY_GAMEOVERSCREEN, onGameStart);
 		}
@@ -265,7 +262,7 @@ package
 			_tetris.reflectCurrentInField();
 			
 			TetrisEvent.dispatcher.addEventListener(TetrisEvent.REMOVE_FILLED_LINES, onRemoveFilledLines);
-			if(!updateScore(_tetris.removeFilledLines())) 
+			if (!updateScore(_tetris.removeFilledLines())) 
 			{
 				TetrisEvent.dispatcher.removeEventListener(TetrisEvent.REMOVE_FILLED_LINES, onRemoveFilledLines);
 			} 

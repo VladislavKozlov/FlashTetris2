@@ -5,7 +5,7 @@ package utils
 	
 	/**
 	 * ...
-	 * @author ...
+	 * @author Vladislav Kozlov <k2v.akosa@gmail.com>
 	 */
 	public class JsonParserBase
 	{
@@ -14,10 +14,8 @@ package utils
 		
 		private var _rawData:Object;
 		
-		
 		public function JsonParserBase() 
-		{
-			
+		{			
 		}
 		
 		public function parse(rawData:Object):void
@@ -30,7 +28,8 @@ package utils
 			_rawData = null;
 		}
 		
-		protected function addInt(prop:String, defVal:int = 0):void {
+		protected function addInt(prop:String, defVal:int = 0):void 
+		{
 			if (_rawData[prop] && _rawData[prop] is int)
 			{
 				_values[prop] = _rawData[prop];
@@ -43,7 +42,8 @@ package utils
 			}
 		}
 		
-		protected function addNumber(prop:String, defVal:Number = 0):void {
+		protected function addNumber(prop:String, defVal:Number = 0):void 
+		{
 			if (_rawData[prop] && _rawData[prop] is Number)
 			{
 				_values[prop] = _rawData[prop];
@@ -56,7 +56,8 @@ package utils
 			}
 		}
 		
-		protected function addBool(prop:String, defVal:Boolean = false):void {
+		protected function addBool(prop:String, defVal:Boolean = false):void 
+		{
 			if (_rawData[prop] && _rawData[prop] is Boolean)
 			{
 				_values[prop] = _rawData[prop];
@@ -69,7 +70,8 @@ package utils
 			}
 		}
 		
-		protected function addString(prop:String, defVal:String = null):void {
+		protected function addString(prop:String, defVal:String = null):void 
+		{
 			if (_rawData[prop] && _rawData[prop] is String)
 			{
 				_values[prop] = _rawData[prop];
@@ -82,7 +84,8 @@ package utils
 			}
 		}
 		
-		protected function addPoint(prop:String, needDefault:Boolean = false, defX:Number = 0, defY:Number = 0):void {
+		protected function addPoint(prop:String, needDefault:Boolean = false, defX:Number = 0, defY:Number = 0):void 
+		{
 			var t:Array = _rawData[prop] as Array;
 			if (_rawData[prop] && t != null && t.length == 2)
 			{
@@ -98,7 +101,8 @@ package utils
 			}
 		}
 		
-		protected function addRect(prop:String, needDefault:Boolean = false, defX:Number = 0, defY:Number = 0, defW:Number = 0, defH:Number = 0):void {
+		protected function addRect(prop:String, needDefault:Boolean = false, defX:Number = 0, defY:Number = 0, defW:Number = 0, defH:Number = 0):void 
+		{
 			var t:Array = _rawData[prop] as Array;
 			if (_rawData[prop] && t != null && t.length == 4)
 			{
@@ -114,7 +118,8 @@ package utils
 			}
 		}
 		
-		protected function addArray(prop:String, defVal:Array = null):void {
+		protected function addArray(prop:String, defVal:Array = null):void 
+		{
 			if (_rawData[prop] && _rawData[prop] is Array)
 			{
 				
@@ -128,5 +133,4 @@ package utils
 			}
 		}
 	}
-
 }

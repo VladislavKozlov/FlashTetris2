@@ -33,8 +33,7 @@ package tetris.ui
 			background = Assets.backgroundGeneral;
 			background.smoothing = true;
 			background.alpha = 0.1;
-			gameOverScreenContainer.addChild(background);
-			
+			gameOverScreenContainer.addChild(background);			
 			background.x = (gameOverScreenContainer.width - background.width) / 2;
 			background.y = (gameOverScreenContainer.height - background.height) / 2;
 			
@@ -42,8 +41,7 @@ package tetris.ui
 			tetrisBackground = Assets.backgroundGameOver;
 			tetrisBackground.smoothing = true;
 			tetrisBackground.alpha = 0.5;
-			gameOverScreenContainer.addChild(tetrisBackground);
-			
+			gameOverScreenContainer.addChild(tetrisBackground);			
 			tetrisBackground.x = (background.width - tetrisBackground.width) / 2;
 			tetrisBackground.y = (background.height - tetrisBackground.height) / 2;
 			
@@ -61,8 +59,7 @@ package tetris.ui
 			gameOverScreenContainer.addChild(backgroundButton);
 			
 			var buttonPlayBp:Bitmap = new Bitmap();
-			buttonPlayBp = Assets.buttonPlay;
-			
+			buttonPlayBp = Assets.buttonPlay;			
 			_buttonPlay = new UIButton(null, buttonPlayBp);
 			_buttonPlay.x = tetrisBackground.x + 220;
 			_buttonPlay.y = tetrisBackground.y + 250;
@@ -70,8 +67,7 @@ package tetris.ui
 			_buttonPlay.addEventListener(MouseEvent.CLICK, onPlayClick);
 			
 			var buttonQuitBp:Bitmap = new Bitmap();
-			buttonQuitBp = Assets.buttonQuit;
-			
+			buttonQuitBp = Assets.buttonQuit;			
 			_buttonQuit = new UIButton(null, buttonQuitBp);
 			_buttonQuit.x = tetrisBackground.x + 220;
 			_buttonQuit.y = tetrisBackground.y + 300;

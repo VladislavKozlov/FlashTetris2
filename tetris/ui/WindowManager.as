@@ -26,15 +26,18 @@ package tetris.ui
 			var strWin: String = String(wnd);
 			
 			if (!_windows.hasOwnProperty(strWin))
-				_windows[strWin] = new wnd();	
+			{
+				_windows[strWin] = new wnd();
+			}
 				
 			_currWindow = _windows[strWin];
-			_cont.addChild(_currWindow);
-			
+			_cont.addChild(_currWindow);			
 			_showedWindows[strWin] = _currWindow;
 			
 			if (placeAtCenter)
+			{
 				placeBackground(_currWindow);
+			}
 		}
 		
 		public static function hide(wnd:Class):void

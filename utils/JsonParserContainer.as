@@ -2,16 +2,14 @@ package utils
 {
 	/**
 	 * ...
-	 * @author ...
+	 * @author Vladislav Kozlov <k2v.akosa@gmail.com>
 	 */
 	public class JsonParserContainer extends JsonParserBase
-	{
-		
+	{		
 		private var _priKey:String;
 		public function JsonParserContainer(priKey:String) 
 		{
-			super();
-			
+			super();		
 			_priKey = priKey;
 		}
 		
@@ -27,6 +25,7 @@ package utils
 			var cKey:String;
 			var l:int = rawValues.length;
 			var cDataInstance:JsonParserBase;
+			
 			for (var i:int = 0; i < l; i++) 
 			{
 				cObjData = rawValues[i];
@@ -40,8 +39,6 @@ package utils
 		protected function getDataInstance(key:*):*
 		{
 			return _values[key];
-		}
-		
+		}		
 	}
-
 }

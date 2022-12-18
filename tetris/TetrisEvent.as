@@ -41,7 +41,9 @@ package tetris
 		public static function get dispatcher():EventDispatcher
 		{
 			if (_dispatcher == null)
+			{
 				_dispatcher = new EventDispatcher();
+			}
 				
 			return _dispatcher;
 		}

@@ -28,32 +28,26 @@ package  tetris.graphic
 		private var _blockZright:Array = [];
 		private var _blockT:Array = [];
 		private var _blockL:Array = [];
-		private var _blockG:Array = [];
-		
+		private var _blockG:Array = [];	
 		private var _blocksFigures:Array = [];
-		private var _blockBitmaps:Array = [];
-		
+		private var _blockBitmaps:Array = [];	
 		private var _blockRect:Array = [];
 		private var _blockGBig:Array = [];
-		private var _blockLBig:Array = [];
-		
+		private var _blockLBig:Array = [];	
 		private var _arrayShapeFigure:Array = [];
 		private var _blockFigure:Array = [];
-		private var _arrayBlocksBitmaps:Array = [];
-		
+		private var _arrayBlocksBitmaps:Array = [];	
 		private var _blockCubeBD:BitmapData;
 		private var _blockPalkaBD:BitmapData;
 		private var _blockZleftBD:BitmapData;
 		private var _blockZrightBD:BitmapData;
 		private var _blockTBD:BitmapData;
 		private var _blockLBD:BitmapData;
-		private var _blockGBD:BitmapData;
-		
+		private var _blockGBD:BitmapData;	
 		private var _blockBD:BitmapData;
 		private var _blockRectBD:BitmapData;
 		private var _blockGBigBD:BitmapData;
-		private var _blockLBigBD:BitmapData;
-		
+		private var _blockLBigBD:BitmapData;	
 		private var _blocksLength:int;
 		private var _figureBlockInit:Boolean = false;
 		private var _tetrisCont:DisplayObjectContainer;
@@ -72,40 +66,31 @@ package  tetris.graphic
 			
 			var blockCub:Bitmap = new Bitmap();
 			blockCub = Assets.shape1;
-			_blockCubeBD = blockCub.bitmapData;
-			
+			_blockCubeBD = blockCub.bitmapData;	
 			var blockPalka:Bitmap = new Bitmap();
 			blockPalka = Assets.shape7;
-			_blockPalkaBD = blockPalka.bitmapData;
-			
+			_blockPalkaBD = blockPalka.bitmapData;		
 			var blockZleft:Bitmap = new Bitmap();
 			blockZleft = Assets.shape3;
-			_blockZleftBD = blockZleft.bitmapData;
-			
+			_blockZleftBD = blockZleft.bitmapData;		
 			var blockZright:Bitmap = new Bitmap();
 			blockZright = Assets.shape4;
-			_blockZrightBD = blockZright.bitmapData;
-			
+			_blockZrightBD = blockZright.bitmapData;			
 			var blockT:Bitmap = new Bitmap();
 			blockT = Assets.shape2;
-			_blockTBD = blockT.bitmapData;
-			
+			_blockTBD = blockT.bitmapData;		
 			var blockL:Bitmap = new Bitmap();
 			blockL = Assets.shape6;
-			_blockLBD = blockL.bitmapData;
-			
+			_blockLBD = blockL.bitmapData;			
 			var blockG:Bitmap = new Bitmap();
 			blockG = Assets.shape5;
-			_blockGBD = blockG.bitmapData;
-			
+			_blockGBD = blockG.bitmapData;		
 			var blockRect:Bitmap = new Bitmap();
 			blockRect = Assets.shape8;
-			_blockRectBD = blockRect.bitmapData;
-			
+			_blockRectBD = blockRect.bitmapData;		
 			var blockGBig:Bitmap = new Bitmap();
 			blockGBig = Assets.shape9;
-			_blockGBigBD = blockGBig.bitmapData;
-			
+			_blockGBigBD = blockGBig.bitmapData;		
 			var blockLBig:Bitmap = new Bitmap();
 			blockLBig = Assets.shape10;
 			_blockLBigBD = blockLBig.bitmapData;
@@ -134,7 +119,7 @@ package  tetris.graphic
 			figureArrayInit(_figureType, _figureBlocks);
 			_figureCoordinates = [];
 			
-			if (_x ==0 && _y == 0)//if nextFigure
+			if (_x ==0 && _y == 0)
 			{
 				for (var i:int = 0; i < _figureVector.length; i += 2 ) 
 				{
@@ -267,7 +252,6 @@ package  tetris.graphic
 				}
 			}
 			
-			//.........................
 			if (typeFigure == 7)
 			{
 				blocksArrayInit(_blocksFigures[7], _blockRectBD);

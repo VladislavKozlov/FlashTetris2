@@ -41,8 +41,7 @@ package tetris.ui
 			var background:Bitmap = new Bitmap();
 			background = Assets.backgroundGeneral;
 			background.smoothing = true;
-			gameScreenStaticContainer.addChild(background);
-			
+			gameScreenStaticContainer.addChild(background);			
 			background.x = (gameScreenStaticContainer.width - background.width) / 2;
 			background.y = (gameScreenStaticContainer.height - background.height) / 2;
 			
@@ -52,8 +51,7 @@ package tetris.ui
 			gameScreenStaticContainer.addChild(tetrisBackground);
 			
 			tetrisBackground.x = (background.width - tetrisBackground.width) / 2;
-			tetrisBackground.y = (background.height - tetrisBackground.height) / 2;
-			
+			tetrisBackground.y = (background.height - tetrisBackground.height) / 2;			
 			_levelTextField = createTextField(tetrisBackground.x + 220, tetrisBackground.y + 120, TextFieldAutoSize.LEFT, TextFormatAlign.LEFT);
 			_levelTextField.text = "Level: 1";
 			_linesTextField = createTextField(tetrisBackground.x + 220, tetrisBackground.y + 150, TextFieldAutoSize.LEFT, TextFormatAlign.LEFT);
@@ -68,8 +66,7 @@ package tetris.ui
 			gameScreenStaticContainer.addChild(gameLogo);
 			
 			var buttonPlayBp:Bitmap = new Bitmap();
-			buttonPlayBp = Assets.buttonPlay;
-			
+			buttonPlayBp = Assets.buttonPlay;			
 			_buttonPlay = new UIButton(null, buttonPlayBp);
 			_buttonPlay.x = tetrisBackground.x + 220;
 			_buttonPlay.y = tetrisBackground.y + 250;
@@ -77,8 +74,7 @@ package tetris.ui
 			_buttonPlay.addEventListener(MouseEvent.CLICK, onPlayClick);
 			
 			var buttonQuitBp:Bitmap = new Bitmap();
-			buttonQuitBp = Assets.buttonQuit;
-			
+			buttonQuitBp = Assets.buttonQuit;		
 			_buttonQuit = new UIButton(null, buttonQuitBp);
 			_buttonQuit.x = tetrisBackground.x + 220;
 			_buttonQuit.y = tetrisBackground.y + 300;

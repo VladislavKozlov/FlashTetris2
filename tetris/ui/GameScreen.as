@@ -46,20 +46,18 @@ package tetris.ui
 			_background = new Bitmap();
 			_background = Assets.backgroundGeneral;
 			_background.smoothing = true;
-			_gameScreenDynamicContainer.addChild(_background);
-			
+			_gameScreenDynamicContainer.addChild(_background);		
 			_background.x = (_gameScreenDynamicContainer.width - _background.width) / 2;
-			_background.y = (_gameScreenDynamicContainer.height - _background.height) / 2;
-		
+			_background.y = (_gameScreenDynamicContainer.height - _background.height) / 2;		
 			_gameScreenDynamicContainer.addChild(tetrisContainer);
+			
 			_background = new Bitmap();
 			_background = Assets.backgroundTetris;
 			_background.smoothing = true;
 			tetrisContainer.addChild(_background);
 			
 			tetrisContainer.x = (_gameScreenDynamicContainer.width - tetrisContainer.width) / 2;
-			tetrisContainer.y = (_gameScreenDynamicContainer.height - tetrisContainer.height) / 2;
-			
+			tetrisContainer.y = (_gameScreenDynamicContainer.height - tetrisContainer.height) / 2;	
 			_levelTextField = createTextField(tetrisContainer.x + 220, tetrisContainer.y + 120, TextFieldAutoSize.LEFT, TextFormatAlign.LEFT);
 			_linesTextField = createTextField(tetrisContainer.x + 220, tetrisContainer.y + 150, TextFieldAutoSize.LEFT, TextFormatAlign.LEFT);
 			_scoreTextField = createTextField(tetrisContainer.x + 220, tetrisContainer.y + 180, TextFieldAutoSize.LEFT, TextFormatAlign.LEFT);

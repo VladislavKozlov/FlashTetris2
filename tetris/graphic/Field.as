@@ -16,23 +16,19 @@ package  tetris.graphic
 		private var _widthField:int; 
 		private var _heightField:int; 
 		private var _fieldVector:Vector.<Vector.<int>>;
-		private var _fieldBlocks:Array;
-		
+		private var _fieldBlocks:Array;		
 		private var _fieldLengthBlocks:int;
-		private var _size:int;
-		
+		private var _size:int;		
 		private var _blockCubeBD:BitmapData;
 		private var _blockPalkaBD:BitmapData;
 		private var _blockZleftBD:BitmapData;
 		private var _blockZrightBD:BitmapData;
 		private var _blockTBD:BitmapData;
 		private var _blockLBD:BitmapData;
-		private var _blockGBD:BitmapData;
-		
+		private var _blockGBD:BitmapData;		
 		private var _blockRectBD:BitmapData;
 		private var _blockGBigBD:BitmapData;
-		private var _blockLBigBD:BitmapData;
-		
+		private var _blockLBigBD:BitmapData;		
 		private var _indeksRect:int;
 		private var _tetrisCont:DisplayObjectContainer;
 		
@@ -46,40 +42,31 @@ package  tetris.graphic
 			
 			var blockCub:Bitmap = new Bitmap();
 			blockCub = Assets.shape1;
-			_blockCubeBD = blockCub.bitmapData;
-			
+			_blockCubeBD = blockCub.bitmapData;			
 			var blockPalka:Bitmap = new Bitmap();
 			blockPalka = Assets.shape7;
-			_blockPalkaBD = blockPalka.bitmapData;
-			
+			_blockPalkaBD = blockPalka.bitmapData;			
 			var blockZleft:Bitmap = new Bitmap();
 			blockZleft = Assets.shape3;
-			_blockZleftBD = blockZleft.bitmapData;
-			
+			_blockZleftBD = blockZleft.bitmapData;			
 			var blockZright:Bitmap = new Bitmap();
 			blockZright = Assets.shape4;
-			_blockZrightBD = blockZright.bitmapData;
-			
+			_blockZrightBD = blockZright.bitmapData;			
 			var blockT:Bitmap = new Bitmap();
 			blockT = Assets.shape2;
-			_blockTBD = blockT.bitmapData;
-			
+			_blockTBD = blockT.bitmapData;			
 			var blockL:Bitmap = new Bitmap();
 			blockL = Assets.shape6;
-			_blockLBD = blockL.bitmapData;
-			
+			_blockLBD = blockL.bitmapData;		
 			var blockG:Bitmap = new Bitmap();
 			blockG = Assets.shape5;
-			_blockGBD = blockG.bitmapData;
-			
+			_blockGBD = blockG.bitmapData;		
 			var blockRect:Bitmap = new Bitmap();
 			blockRect = Assets.shape8;
-			_blockRectBD = blockRect.bitmapData;
-			
+			_blockRectBD = blockRect.bitmapData;		
 			var blockGBig:Bitmap = new Bitmap();
 			blockGBig = Assets.shape9;
-			_blockGBigBD = blockGBig.bitmapData;
-			
+			_blockGBigBD = blockGBig.bitmapData;		
 			var blockLBig:Bitmap = new Bitmap();
 			blockLBig = Assets.shape10;
 			_blockLBigBD = blockLBig.bitmapData;
@@ -100,7 +87,7 @@ package  tetris.graphic
 			
 			function fieldDraw(fieldPointType:int, xc:int, yc:int):void
 			{
-				if (fieldPointType == 1)//cube
+				if (fieldPointType == 1)
 				{
 					block[_indeksRect] = new Bitmap(_blockCubeBD);
 					block[_indeksRect].x = xc * _size;
@@ -108,7 +95,7 @@ package  tetris.graphic
 					_fieldBlocks.push(block[_indeksRect]);
 					_indeksRect++;
 				}
-				if (fieldPointType == 2)//palka
+				if (fieldPointType == 2)
 				{
 					block[_indeksRect] = new Bitmap(_blockPalkaBD);
 					block[_indeksRect].x = xc * _size;
@@ -116,7 +103,7 @@ package  tetris.graphic
 					_fieldBlocks.push(block[_indeksRect]);
 					_indeksRect++;
 				}
-				if (fieldPointType == 3)//z_left
+				if (fieldPointType == 3)
 				{
 					block[_indeksRect] = new Bitmap(_blockZleftBD);
 					block[_indeksRect].x = xc * _size;
@@ -124,7 +111,7 @@ package  tetris.graphic
 					_fieldBlocks.push(block[_indeksRect]);
 					_indeksRect++;
 				}
-				if (fieldPointType == 4)//z_right
+				if (fieldPointType == 4)
 				{
 					block[_indeksRect] = new Bitmap(_blockZrightBD);
 					block[_indeksRect].x = xc * _size;
@@ -132,7 +119,7 @@ package  tetris.graphic
 					_fieldBlocks.push(block[_indeksRect]);
 					_indeksRect++;
 				}
-				if (fieldPointType == 5)//T
+				if (fieldPointType == 5)
 				{
 					block[_indeksRect] = new Bitmap(_blockTBD);
 					block[_indeksRect].x = xc * _size;
@@ -140,7 +127,7 @@ package  tetris.graphic
 					_fieldBlocks.push(block[_indeksRect]);
 					_indeksRect++;
 				}
-				if (fieldPointType == 6)//L
+				if (fieldPointType == 6)
 				{
 					block[_indeksRect] = new Bitmap(_blockLBD);
 					block[_indeksRect].x = xc * _size;
@@ -148,7 +135,7 @@ package  tetris.graphic
 					_fieldBlocks.push(block[_indeksRect]);
 					_indeksRect++;
 				}
-				if (fieldPointType == 7)//G
+				if (fieldPointType == 7)
 				{
 					block[_indeksRect] = new Bitmap(_blockGBD);
 					block[_indeksRect].x = xc * _size;
@@ -157,8 +144,7 @@ package  tetris.graphic
 					_indeksRect++;
 				}
 				
-				//.........................
-				if (fieldPointType == 8)//Rect
+				if (fieldPointType == 8)
 				{
 					block[_indeksRect] = new Bitmap(_blockRectBD);
 					block[_indeksRect].x = xc * _size;
@@ -166,7 +152,7 @@ package  tetris.graphic
 					_fieldBlocks.push(block[_indeksRect]);
 					_indeksRect++;
 				}	
-				if (fieldPointType == 9)//Rect
+				if (fieldPointType == 9)
 				{
 					block[_indeksRect] = new Bitmap(_blockGBigBD);
 					block[_indeksRect].x = xc * _size;
@@ -174,7 +160,7 @@ package  tetris.graphic
 					_fieldBlocks.push(block[_indeksRect]);
 					_indeksRect++;
 				}
-				if (fieldPointType == 10)//Rect
+				if (fieldPointType == 10)
 				{
 					block[_indeksRect] = new Bitmap(_blockLBigBD);
 					block[_indeksRect].x = xc * _size;

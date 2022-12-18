@@ -20,11 +20,9 @@ package
 		
 		private function init(e:Event = null):void 
 		{
-			removeEventListener(Event.ADDED_TO_STAGE, init);
-			
+			removeEventListener(Event.ADDED_TO_STAGE, init);		
 			_game = new Game();
-			addChild(_game);
-			
+			addChild(_game);			
 			new FigureProcessor();
 		}
 	}
